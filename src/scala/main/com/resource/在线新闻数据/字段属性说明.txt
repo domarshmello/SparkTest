@@ -1,0 +1,66 @@
+属性信息：
+
+属性数量：61（58个预测属性，2个非预测性，1个目标字段） 
+
+属性信息： 
+0. url：文章的URL（非预测性） 
+1. timedelta：文章发布和数据集获取之间的天数- 预测性） 
+2. n_tokens_title：标题中的词的数量
+3. n_tokens_content：内容中的词的数量
+4. n_unique_tokens：内容中 的唯一词的比率
+5. n_non_stop_words：内容中 的非停止词的比率
+6. n_non_stop_unique_tokens ：内容中独特的不间断单词的比率
+7. num_hrefs：链接数量 
+8. num_self_hrefs：由Mashable发布的其他文章的链接数量 
+9. num_imgs：图片数量
+10. num_videos：视频数量 
+11. average_token_length：内容中单词的平均长度 
+12. num_keywords：元数据中的关键字数量 
+13. data_channel_is_lifestyle：数据频道是“生活方式”吗？ 
+14. data_channel_is_entertainment：数据频道是“娱乐”吗？ 
+15. data_channel_is_bus：数据通道是'Business'吗？ 
+16. data_channel_is_socmed：数据频道是“社交媒体”吗？ 
+17. data_channel_is_tech：数据频道是'Tech'吗？ 
+18. data_channel_is_world：数据频道是“世界”吗？ 
+19. kw_min_min：最差的关键字（最少的份额） 
+20. kw_max_min：最差的关键字（最大份额） 
+21. kw_avg_min：最差的关键字（avg。份额） 
+22. kw_min_max：最好的关键字（最小份额） 
+23. kw_max_max：最好的关键字（最大份额） 
+24. kw_avg_max：最佳关键字（平均份额） 
+25. kw_min_avg：平均 关键字（最少分享） 
+26. kw_max_avg：平均 关键字（最大份额） 
+27. kw_avg_avg：平均 关键字（平均股数） 
+28. self_reference_min_shares：最小。Mashable 
+29 中引用文章的份额 。self_reference_max_shares：Max。Mashable 
+30 中引用文章的份额 。self_reference_avg_sharess：平均值。在Mashable 
+31 中引用文章的份额 。weekday_is_monday：这篇文章是在星期一发布的吗？ 
+32. weekday_is_tuesday：这篇文章是在周二发表的吗？ 
+33. weekday_is_wednesday：这篇文章是在星期三发表的吗？ 
+34. weekday_is_thursday：这篇文章是在星期四发表的吗？ 
+35. weekday_is_friday：这篇文章是在星期五发表的吗？ 
+36. weekday_is_saturday：这篇文章是在星期六发表的吗？ 
+37. weekday_is_sunday：这篇文章是在星期天发表的吗？ 
+38. is_weekend：这篇文章是在周末发表的吗？ 
+39. LDA_00：接近LDA主题0 
+40. LDA_01：接近LDA主题1 
+41. LDA_02：接近LDA主题2 
+42. LDA_03：接近LDA主题3 
+43. LDA_04：接近LDA主题4 
+44. global_subjectivity：Text主观性 
+45. global_sentiment_polarity：文本情感极性 
+46. global_rate_positive_words：内容中正面词语的比率
+47. global_rate_negative_words：内容中负面词语的比率
+48. rate_positive_words：非中性词典中正面词语的比率
+49. rate_negative_words：非中性 词典中负面词语的比率
+50。 avg_positive_polarity：平均 正面词的极性 
+51. min_positive_polarity：最小。正面词语的极性 
+52. max_positive_polarity：正面词汇的极性 
+53. avg_negative_polarity：平均。否定词的极性 
+54. min_negative_polarity：最小。否定词的极性 
+55. max_negative_polarity：最大。的否定词极性标题主观性：
+56. title_subjectivity
+57. title_sentiment_polarity：标题极性 
+58. abs_title_subjectivity：绝对主观性级别 
+59. abs_title_sentiment_polarity：绝对电平极性 
+60.股：股数（目标）

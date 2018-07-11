@@ -1,0 +1,51 @@
+group 'Learn'
+version '1.0-SNAPSHOT'
+
+// 引入 Scala 构建插件
+apply plugin: 'scala'
+
+// 项目初始化脚本，此处只是设置了变量及创建文件夹
+buildscript {
+    // 此处填写你的 Spark 版本号
+    ext.spark_version = '2.3.0'
+    // 此处填写你的 Spark 自带的 Scala 版本号
+    // 不清楚可以在服务器上运行 spark-shell，会有相关提示
+    ext.scala_version = '2.11.8'
+    ext.scala_src_dir = "src/scala"
+    ext.scala_test_dir = "test/scala"
+    mkdir(scala_src_dir)
+    mkdir(scala_test_dir)
+}
+
+// 设置远端仓库为 Maven
+repositories {
+    mavenCentral()
+}
+
+// 设置源码编译版本为 Java 1.8
+sourceCompatibility = 1.8
+
+// 设置项目资源目录
+sourceSets {
+    main {
+        main.scala.srcDirs += scala_src_dir
+    }
+    test {
+        main.scala.srcDirs += scala_test_dir
+    }
+}
+
+// 引入相关依赖（相当于导包）
+dependencies {
+    // Scala 相关
+    compile "org.scala-lang:scala-library:$scala_version"
+    testCompile 'org.scalatest:scalatest_2.11:3.0.0'
+    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.1.0'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    // Spark 相关
+    compile group: 'org.apache.spark', name: 'spark-core_2.11', version: "$spark_version"
+    compile group: 'org.apache.spark', name: 'spark-sql_2.11', version: "$spark_version"
+    compile group: 'org.apache.spark', name: 'spark-streaming_2.11', version: "$spark_version"
+    compile group: 'org.apache.spark', name: 'spark-mllib_2.11', version: "$spark_version"
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.46'
+}
